@@ -1,1 +1,25 @@
-<app-usuario></app-usuario>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+        <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="Logo bootstrap">
+      FrontEnd-App1</a>
+    <button class="navbar-toggler navbar-togger-rigth" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+      
+          <a class="nav-item nav-link active" [routerLink]="[ '/usuarioComponent']">Usuarios</a>
+          <a class="nav-item nav-link"[routerLink]="[ '/crearUsuarioComponent' ]">Crear Usuario</a>
+          <a class="nav-item nav-link" href="#">Pricing</a>
+          <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        </div>
+    </div>
+ 
+  
+</nav>
+<!--
+<button type="button"  [routerLink]="[ '/usuarioComponent']" class="btn btn-success">Usuarios</button>
+<button type="button"  [routerLink]="[ '/crearUsuarioComponent' ]" class="btn btn-primary">Agregar Usuarios</button>
+-->
+<router-outlet></router-outlet>
