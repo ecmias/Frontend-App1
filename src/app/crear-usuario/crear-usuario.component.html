@@ -1,10 +1,14 @@
 <div class="container " style="margin-top: 25px" >
  <h1>Crear Nuevo Usuario</h1> 
-    <form class="main-form">
+ 
+    <form class="main-form" novalidate>
+        <div *ngIf="!isValid" class="alert alert-danger" role="alert">
+           {{message}}
+          </div>
       <div class="form-group row">
         <label for="nombres" class="col-sm-2 col-form-label">Nombres</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" name="nombres" id="nombres" placeholder="Nombres" [(ngModel)]="usuario.nombres">
+          <input type="text" class="form-control" name="nombres" id="nombres" placeholder="Nombres" [(ngModel)]="usuario.nombres" required>
         </div>
       </div>
       <div class="form-group row">
@@ -31,10 +35,11 @@
                   <input type="text" class="form-control"  name="direccion" id="direccion" placeholder="Direccion" [(ngModel)]="usuario.direccion">
                 </div>
               </div>
-     
+
+
       <div class="form-group row">
         <div class="offset-sm-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-primary" (click)="saveOrUpdate()">Guardar</button>
         </div>
       </div>
     </form>
