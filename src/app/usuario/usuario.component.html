@@ -10,6 +10,7 @@
       <th scope="col">Apellido Paterno</th>
       <th scope="col">Apellido Materno</th>
       <th scope="col">Direccion</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,8 @@
       <td>{{item.apellidoPaterno}}</td>
       <td>{{item.apellidoMaterno}}</td>
       <td>{{item.direccion}}</td>
+      <th scope="col"><img src="../../assets/editIcon.png" (click)="edit(item)"style="cursor: pointer;">
+        <img src="../../assets/deletered.png" (click)="eliminar(item)" style="cursor: pointer;"></th>
     </tr>
     
   </tbody>

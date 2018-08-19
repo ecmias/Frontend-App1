@@ -4,23 +4,25 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsuarioComponent } from './usuario/usuario.component';
 
-const routes:Routes=[
-    { path:'',redirectTo:'/usuarioComponent',pathMatch:'full'},
+const routes: Routes = [
+    { path: '', redirectTo: '/usuarioComponent', pathMatch: 'full' },
+   
     {
-       
-        path:'appComponent',component:AppComponent
+
+        path: 'appComponent', component: AppComponent
     },
     {
-        path:'usuarioComponent',component:UsuarioComponent
+        path: 'usuarioComponent', component: UsuarioComponent
     },
     {
-        path:'crearUsuarioComponent',component:CrearUsuarioComponent
-    }
+        path: 'crearUsuarioComponent', component: CrearUsuarioComponent
+    },
+   
 ];
 @NgModule({
-    
-    imports: [ RouterModule.forRoot(routes)],
+
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
-    
+
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
