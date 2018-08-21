@@ -31,11 +31,16 @@ export class UsuarioComponent implements OnInit {
     this.routes.navigate(['/crearUsuarioComponent']);
   }
   private delete(usuario: UsuarioModel): void {
-    this.usuarioservicio.deleteUsuario(usuario);
-  
+   // this.usuarioservicio.deleteUsuario(usuario).subscribe((data)=>{this.usuarios.splice(this.usuarios.indexOf(usuario),1)},
+
+    //(error)=>{console.log(error)});
+    this.usuarioservicio.deleteUsuario(usuario).subscribe((data)=>{this.usuarios.splice(this.usuarios.indexOf(usuario),1)},
+    (error)=>{console.log(error)});
   }
   private eliminar(usuario: UsuarioModel): void {
-    this.usuarioservicio.eliminarUsuario(usuario.id).subscribe((data)=>{this.usuarios.splice(this.usuarios.indexOf(usuario),1)},(error)=>{console.log(error)});
+    this.usuarioservicio.eliminarUsuario(usuario.id).subscribe((data)=>{this.usuarios.splice(this.usuarios.indexOf(usuario),1)},
+    
+    (error)=>{console.log(error)});
   
   }
  
